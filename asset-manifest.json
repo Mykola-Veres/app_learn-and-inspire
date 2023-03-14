@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "//Mykola-Veres/app_learn-and-inspire/static/css/main.7acaea2f.css",
+    "main.js": "//Mykola-Veres/app_learn-and-inspire/static/js/main.2851c404.js",
+    "index.html": "//Mykola-Veres/app_learn-and-inspire/index.html",
+    "main.7acaea2f.css.map": "//Mykola-Veres/app_learn-and-inspire/static/css/main.7acaea2f.css.map",
+    "main.2851c404.js.map": "//Mykola-Veres/app_learn-and-inspire/static/js/main.2851c404.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.2851c404.js"
+  ]
+}
