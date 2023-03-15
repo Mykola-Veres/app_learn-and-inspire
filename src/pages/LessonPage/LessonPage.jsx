@@ -1,0 +1,1 @@
+//preview-courses/:courseId
