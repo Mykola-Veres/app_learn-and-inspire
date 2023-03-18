@@ -6,13 +6,15 @@ function HoverVideo({ showVideo, courseVideoPreview }) {
   return createPortal(
     <>
       {showVideo && courseVideoPreview && (
-        <>
-          <ReactPlayerStyled>
-            <ModalStyle>
-              <ReactPlayer url={courseVideoPreview.link} playing={true} />
-            </ModalStyle>
-          </ReactPlayerStyled>
-        </>
+        <ReactPlayerStyled>
+          <ModalStyle>
+            {/* <ReactPlayer
+              url={courseVideoPreview.link}
+              playing={true}
+              volume={0}
+            /> */}
+          </ModalStyle>
+        </ReactPlayerStyled>
       )}
     </>,
     document.querySelector('#modal-root')

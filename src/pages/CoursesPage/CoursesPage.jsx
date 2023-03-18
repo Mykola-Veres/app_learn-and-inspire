@@ -1,6 +1,5 @@
 import { useFetchCoursesDataAPI } from '../../hooks/useFetchDataCourse';
 import { useState } from 'react';
-
 import CoursesListItem from '../../components/CoursesListItems';
 import CoursesListPagination from 'components/CoursesListPagination';
 import Loader from 'components/Loader';

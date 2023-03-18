@@ -13,3 +13,10 @@ export function fetchCourseData() {
     .then(response => response.data.courses);
   return fetchCoursesData;
 }
+
+export function fetchLessonsData(courseId) {
+  const fetchCourseData = axios
+    .get(`/core/preview-courses/${courseId}`)
+    .then(response => response.data);
+  return fetchCourseData;
+}
