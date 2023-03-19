@@ -1,12 +1,17 @@
 import LessonList from 'components/LessonsList/LessonsList';
-import ReactPlayer from 'react-player';
+import ReactPlayerCourse from 'ReactPlayer/ReactPlayer';
+
 import {
+  ConteinerLessonsDetailsStyled,
   ConteinerLessonsStyled,
+  ConteinerLessonsTitleStyled,
   CourseTextStyled,
   DescriptionConteinerStyled,
+  ImageCoursesConteinerStyled,
+  ImageCoursesStyled,
   ListSkillsStyled,
-  PlayerStyled,
   RatingsConreinerStyled,
+  ReactPlayerCourseStyled,
   TitleCourseStyled,
 } from './LessonDetailsStyled';
 
@@ -17,31 +22,42 @@ export default function LessonDetails({
     <>
       {meta && (
         <ConteinerLessonsStyled>
-          <div>
-            <img src={previewImageLink + `/cover.webp`} alt={title} />
-          </div>
-          <div>
-            <TitleCourseStyled>{title}</TitleCourseStyled>
-          </div>
+          <ConteinerLessonsDetailsStyled>
+            <ConteinerLessonsTitleStyled>
+              <TitleCourseStyled>{title}</TitleCourseStyled>
+              <ImageCoursesConteinerStyled>
+                <ImageCoursesStyled
+                  src={previewImageLink + `/cover.webp`}
+                  alt={title}
+                />
+              </ImageCoursesConteinerStyled>
+            </ConteinerLessonsTitleStyled>
 
-          <RatingsConreinerStyled>Rating: {rating}</RatingsConreinerStyled>
+            <ConteinerLessonsTitleStyled>
+              <RatingsConreinerStyled>Rating: {rating}</RatingsConreinerStyled>
 
-          <div>
-            <PlayerStyled>
-              {/* <ReactPlayer url={meta.courseVideoPreview.link} playing={true} /> */}
-            </PlayerStyled>
-          </div>
+              <ReactPlayerCourseStyled>
+                <ReactPlayerCourse
+                  url={meta.courseVideoPreview.link}
+                  playing={true}
+                  volume={0.1}
+                />
+              </ReactPlayerCourseStyled>
 
-          <DescriptionConteinerStyled>
-            <CourseTextStyled>{description}</CourseTextStyled>
-          </DescriptionConteinerStyled>
+              <DescriptionConteinerStyled>
+                <CourseTextStyled>{description}</CourseTextStyled>
+              </DescriptionConteinerStyled>
 
-          <ListSkillsStyled>
-            <p>Skills:</p>
-            {meta.skills
-              ? meta.skills.map((skill, index) => <li key={index}>{skill}</li>)
-              : 'no Skills'}
-          </ListSkillsStyled>
+              <ListSkillsStyled>
+                <p>Skills:</p>
+                {meta.skills
+                  ? meta.skills.map((skill, index) => (
+                      <li key={index}>{skill}</li>
+                    ))
+                  : 'no Skills'}
+              </ListSkillsStyled>
+            </ConteinerLessonsTitleStyled>
+          </ConteinerLessonsDetailsStyled>
 
           <LessonList lessons={lessons}></LessonList>
         </ConteinerLessonsStyled>

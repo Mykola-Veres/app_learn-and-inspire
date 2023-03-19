@@ -42,8 +42,9 @@ export const ImageLessonConteinerStyled = styled.div`
   margin-right: 10px;
   object-fit: contain;
   @media (min-width: 1144px) {
-    width: 450px;
-    height: 150px;
+    margin-left: 100px;
+    width: 300px;
+    height: 120px;
     margin-top: 5px;
   }
 `;

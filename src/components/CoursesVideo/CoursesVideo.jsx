@@ -1,6 +1,6 @@
-import ReactPlayer from 'react-player';
 import { ModalStyle, ReactPlayerStyled } from './CoursesVideoStyled';
 import { createPortal } from 'react-dom';
+import ReactPlayerCourse from 'ReactPlayer/ReactPlayer';
 
 function HoverVideo({ showVideo, courseVideoPreview }) {
   return createPortal(
@@ -8,11 +8,7 @@ function HoverVideo({ showVideo, courseVideoPreview }) {
       {showVideo && courseVideoPreview && (
         <ReactPlayerStyled>
           <ModalStyle>
-            {/* <ReactPlayer
-              url={courseVideoPreview.link}
-              playing={true}
-              volume={0}
-            /> */}
+            <ReactPlayerCourse link={courseVideoPreview.link} playing={true} />
           </ModalStyle>
         </ReactPlayerStyled>
       )}
