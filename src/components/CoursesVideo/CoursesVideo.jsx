@@ -8,7 +8,11 @@ function HoverVideo({ showVideo, courseVideoPreview }) {
       {showVideo && courseVideoPreview && (
         <ReactPlayerStyled>
           <ModalStyle>
-            <ReactPlayerCourse link={courseVideoPreview.link} playing={true} />
+            <ReactPlayerCourse
+              link={courseVideoPreview.link}
+              playing={true}
+              volume={0}
+            />
           </ModalStyle>
         </ReactPlayerStyled>
       )}
