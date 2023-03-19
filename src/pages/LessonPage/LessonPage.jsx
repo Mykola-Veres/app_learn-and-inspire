@@ -13,7 +13,6 @@ export default function LessonPage() {
   const location = useLocation();
   const { courseId } = useParams();
   const { items, loading } = useFetchLessonsDataAPI(courseId);
-  console.log('items', items);
 
   return (
     <>
